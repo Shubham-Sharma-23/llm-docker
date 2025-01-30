@@ -30,6 +30,26 @@ This project provides a Dockerized environment for running and experimenting wit
 Once the container is up and running, you can interact with the LLM through the provided API endpoints or command-line interface.
 https://github.com/ollama/ollama/blob/main/docs/api.md
 
+for example:
+```sh
+
+curl http://localhost:11434/api/generate -d '{
+  "model": "deepseek-r1:7b",
+  "prompt": "Create a llm docker project.",
+}'
+
+curl http://localhost:11434/api/chat -d '{
+  "model": "deepseek-r1:7b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Create a react app to display a list of items."
+    }
+  ]
+}'
+```
+
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
